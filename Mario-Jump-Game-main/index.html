@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do Mario de pular</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="game-board is-idle" id="gameBoard">
+
+        <div class="score-board">
+            <div>Pontuação: <span id="score">0</span></div>
+            <div>Recorde: <span id="highScore">0</span></div>
+            <div>Tempo: <span id="timer">0</span></div>
+        </div>
+
+        <div class="game-over" id="gameOver">
+            <h1>Game Over</h1>
+            <p>Pontuação total: <span id="finalScore">0</span></p>
+            <p>Canos pulados: <span id="finalPipes">0</span></p>
+            <p>Tempo total: <span id="finalTime">0</span></p>
+            <p id="newRecord" class="new-record" hidden>Novo recorde!</p>
+            <button id="restartButton">Jogar Novamente</button>
+        </div>
+
+        <div class="start-screen" id="startScreen" role="dialog" aria-modal="true" aria-labelledby="startTitle">
+            <div class="start-modal">
+                <h1 id="startTitle">Jogo do Mario em JavaScript</h1>
+                <div class="key-settings">
+                    <p id="jumpKeyLabel">Teclas para pular: Espaço ou seta para cima</p>
+                    <button type="button" id="changeJumpKeyButton">Alterar tecla de pulo</button>
+                    <button type="button" id="restoreJumpKeysButton">Restaurar padrão</button>
+                    <p id="keyCaptureStatus" aria-live="polite"></p>
+                </div>
+                <button id="startButton">Iniciar jogo</button>
+            </div>
+        </div>
+
+        <img src="images/clouds.png" class="clouds" alt="Nuvens">
+        <img src="images/mario.gif" class="mario" alt="Mario">
+        <img src="images/pipe.png" class="pipe" alt="Cano">
+
+    </div>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>
